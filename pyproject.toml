@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nockchain"
+version = "0.1.0"
+description = "Native Python Nockchain V1 wallets, transactions, multisig and timelocks"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_LICENSES"]
+authors = [{name = "SWPSCO"}]
+keywords = ["nockchain", "nock", "wallet", "multisig"]
+classifiers = ["Programming Language :: Python :: 3", "Typing :: Typed"]
+
+[project.urls]
+Repository = "https://github.com/SWPSCO/nockchain-py"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+nockchain = ["py.typed"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

@@ -1,0 +1,3 @@
+include README.md SECURITY.md requirements-dev.txt
+recursive-include testdata *.json
+recursive-include tests *.py
