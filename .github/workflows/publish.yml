@@ -1,0 +1,50 @@
+name: Publish to PyPI
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: GitHub release tag to publish
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pypi-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/nockchain/
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Download and verify release distributions
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          gh release view "$RELEASE_TAG" --json isDraft,isPrerelease \
+            --jq 'select(.isDraft == false and .isPrerelease == false)' |
+            jq -e . >/dev/null
+          version="${RELEASE_TAG#v}"
+          gh release download "$RELEASE_TAG" --dir dist \
+            --pattern "nockchain-${version}-py3-none-any.whl" \
+            --pattern "nockchain-${version}.tar.gz" \
+            --pattern SHA256SUMS
+          cd dist
+          sha256sum --check --strict SHA256SUMS
+          rm SHA256SUMS
+      - name: Publish verified distributions
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
