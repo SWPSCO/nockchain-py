@@ -23,5 +23,8 @@ jobs:
       - run: |
           python -m venv /tmp/nockchain-wheel
           /tmp/nockchain-wheel/bin/pip install dist/*.whl
+          python -c 'import json; from pathlib import Path; data=json.loads(Path("testdata/signing-bundles.json").read_text()); Path("/tmp/nockchain-bundle.json").write_text(json.dumps(data["cases"][0]["response"]["bundle"]))'
           cd /tmp
           /tmp/nockchain-wheel/bin/python -c 'from nockchain import parse_nocks; assert parse_nocks("1.25") == 81920'
+          /tmp/nockchain-wheel/bin/nockchain inspect /tmp/nockchain-bundle.json
+          /tmp/nockchain-wheel/bin/python -m nockchain inspect /tmp/nockchain-bundle.json

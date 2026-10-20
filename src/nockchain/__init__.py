@@ -1,5 +1,6 @@
 """Nockchain wallet planning and transactions with bounded, immutable nouns."""
 
+from .signing import InspectedSigningBundle, inspect_signing_bundle, sign_signing_bundle
 from .migration import LockV0, NoteV0, note_first_v0
 from ._core import (
     PRIME,
@@ -115,9 +116,12 @@ from .planner import (
     plan,
 )
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 __all__ = [
+    "InspectedSigningBundle",
+    "inspect_signing_bundle",
+    "sign_signing_bundle",
     "LockV0",
     "NoteV0",
     "note_first_v0",

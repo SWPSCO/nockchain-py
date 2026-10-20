@@ -338,9 +338,9 @@ class TransactionV1:
                 ):
                     raise NockchainError("invalid or unauthorized signature")
 
-    def verify_signatures(self) -> None:
-        """Check exact thresholds, every signature, authorization and minimum fee."""
-        self._verify(True)
+    def verify_signatures(self, *, require_threshold: bool = True) -> None:
+        """Check signatures, authorization and minimum fee; optionally allow missing signatures."""
+        self._verify(require_threshold)
         review = self.summary()
         if review.fee_nicks < review.minimum_fee_nicks:
             raise NockchainError("fee below minimum")
