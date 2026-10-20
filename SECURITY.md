@@ -18,9 +18,11 @@ validity. Call `verify_signatures()` and `validate_inputs()` explicitly; obtain
 complete input records, canonical height, unspent status, and confirmations from
 a trusted chain-state source.
 
-The supported V1 subset uses full PKH proofs with optional conjunctive timelocks.
-This package is not a complete consensus validator, chain client, or broadcaster.
-Fee rules are pinned to the referenced source; applications must track changes.
+V1 condition trees and V0 migration inputs are supported. Fund inputs require an
+explicit authoritative identity and maturity policy. Migration parsing requires
+complete V0 records. Bridge payload codecs do not establish cross-chain finality
+or submit Ethereum transactions. This package is not a full consensus validator,
+chain client, or broadcaster. Applications supply correct height and fee contexts.
 Native NOCK uses nicks (2^16 per NOCK), distinct from Base ERC-20 units.
 
 Tests use public Hoon, Rust and BIP39 fixtures. No independent cryptographic audit

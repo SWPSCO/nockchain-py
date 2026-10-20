@@ -301,11 +301,47 @@ def leaf_count(noun: Noun) -> int:
 
 
 def jam(noun: Noun) -> bytes:
-    """Encode literal LSB-first jam, with bounded logical expansion."""
-    data = bytearray()
-    bit = 0
+    """Canonical JAM with first-occurrence structural backreferences and bounded expansion."""
+    values, sizes, interned, identities = [], [], {}, {}
 
-    def write(value: int, size: int) -> None:
+    def identity(value):
+        return (1, id(value)) if isinstance(value, Cell) else (0, atom(value))
+
+    pending = [(noun, False)]
+    active, count = set(), 0
+    while pending:
+        current, visited = pending.pop()
+        key = identity(current)
+        if key in identities:
+            continue
+        if not visited:
+            count += 1
+            if key in active or count > MAX_NOUN_NODES:
+                raise NockchainError("cyclic noun or logical node limit exceeded")
+        if isinstance(current, Cell):
+            if not visited:
+                active.add(key)
+                pending.extend(((current, True), (current.tail, False), (current.head, False)))
+                if len(pending) > MAX_NOUN_NODES * 2:
+                    raise NockchainError("noun exceeds node limit")
+                continue
+            active.remove(key)
+            left, right = identities[identity(current.head)], identities[identity(current.tail)]
+            value, size = (1, left, right), 1 + sizes[left] + sizes[right]
+        else:
+            value, size = (0, atom(current)), 1
+        if size > MAX_NOUN_NODES or len(values) >= MAX_NOUN_NODES:
+            raise NockchainError("noun exceeds logical node limit")
+        node = interned.get(value)
+        if node is None:
+            node = len(values)
+            interned[value] = node
+            values.append(value)
+            sizes.append(size)
+        identities[key] = node
+    data, bit = bytearray(), 0
+
+    def write(value, size):
         nonlocal bit
         for i in range(size):
             if bit // 8 == len(data):
@@ -313,27 +349,36 @@ def jam(noun: Noun) -> bytes:
             data[bit // 8] |= ((value >> i) & 1) << (bit % 8)
             bit += 1
 
-    stack, count = [noun], 0
-    while stack:
-        n = stack.pop()
-        count += 1
-        if count > MAX_NOUN_NODES:
-            raise NockchainError("noun exceeds logical node limit")
-        if isinstance(n, Cell):
-            write(1, 2)
-            stack.extend((n.tail, n.head))
+    def mat(value):
+        length = value.bit_length()
+        if length == 0:
+            write(1, 1)
         else:
-            n = atom(n)
+            size = length.bit_length()
+            write(0, size)
+            write(1, 1)
+            write(length, size - 1)
+            write(value, length)
+
+    stack, backrefs = [identities[identity(noun)]], {}
+    while stack:
+        node = stack.pop()
+        value = values[node]
+        position = backrefs.get(node)
+        if position is not None and (
+            value[0] == 1 or value[1].bit_length() > position.bit_length()
+        ):
+            write(3, 2)
+            mat(position)
+            continue
+        if position is None:
+            backrefs[node] = bit
+        if value[0] == 1:
+            write(1, 2)
+            stack.extend((value[2], value[1]))
+        else:
             write(0, 1)
-            length = n.bit_length()
-            if not length:
-                write(1, 1)
-            else:
-                size = length.bit_length()
-                write(0, size)
-                write(1, 1)
-                write(length, size - 1)
-                write(n, length)
+            mat(value[1])
         if len(data) > MAX_JAM_BYTES:
             raise NockchainError("jam exceeds byte limit")
     return bytes(data)

@@ -1,5 +1,6 @@
-"""Nockchain V1 wallets and transactions with bounded, immutable nouns."""
+"""Nockchain wallet planning and transactions with bounded, immutable nouns."""
 
+from .migration import LockV0, NoteV0, note_first_v0
 from ._core import (
     PRIME,
     MAX_NOUN_NODES,
@@ -72,7 +73,85 @@ from .wallet import (
     select_transfer,
 )
 
+from .lock_tree import (
+    LockTreeV1,
+    LockMerkleProof,
+    LockFormV1,
+    build_lock_merkle_proof,
+    authorization_leaf,
+    valid_stub_axis,
+    parse_lock,
+)
+from .note_data import (
+    NoteData,
+    LockData,
+    BridgeDepositDataPayload,
+    BridgeWithdrawalDataPayload,
+    DecodedNoteDataEntry,
+)
+from .fee import (
+    FeeParameters,
+    FeeBreakdown,
+    WordCountBreakdown,
+    ChainContext,
+    compute_minimum_fee,
+    compute_bridge_fee,
+    transaction_words,
+    note_data_words,
+)
+from .lock_resolver import (
+    FundMaturity,
+    FundMaturityPolicy,
+    FundLockPolicy,
+    LockResolution,
+    LockMatcher,
+    SigningKeyLockMatcher,
+    LockRootLockMatcher,
+)
+from .planner import (
+    PlannedOutput,
+    PlanRequest,
+    PlanResult,
+    plan,
+)
+
+__version__ = "0.2.0"
+
 __all__ = [
+    "LockV0",
+    "NoteV0",
+    "note_first_v0",
+    "LockTreeV1",
+    "LockMerkleProof",
+    "LockFormV1",
+    "build_lock_merkle_proof",
+    "authorization_leaf",
+    "valid_stub_axis",
+    "parse_lock",
+    "NoteData",
+    "LockData",
+    "BridgeDepositDataPayload",
+    "BridgeWithdrawalDataPayload",
+    "DecodedNoteDataEntry",
+    "FeeParameters",
+    "FeeBreakdown",
+    "WordCountBreakdown",
+    "ChainContext",
+    "compute_minimum_fee",
+    "compute_bridge_fee",
+    "transaction_words",
+    "note_data_words",
+    "FundMaturity",
+    "FundMaturityPolicy",
+    "FundLockPolicy",
+    "LockResolution",
+    "LockMatcher",
+    "SigningKeyLockMatcher",
+    "LockRootLockMatcher",
+    "PlannedOutput",
+    "PlanRequest",
+    "PlanResult",
+    "plan",
     "PRIME",
     "MAX_NOUN_NODES",
     "MAX_JAM_BYTES",
@@ -113,6 +192,7 @@ __all__ = [
     "HeightRange",
     "TimelockV1",
     "LockV1",
+    "RequiredPkhPolicy",
     "new_pkh_lock_v1",
     "NoteName",
     "NoteV1",
