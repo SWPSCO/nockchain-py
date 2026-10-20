@@ -1,0 +1,351 @@
+{
+  "cases": [
+    {
+      "name": "payment",
+      "response": {
+        "bundle": {
+          "candidateHeight": "54000",
+          "format": "nockchain-signing-bundle",
+          "inputs": [
+            {
+              "amountNicks": "40000000",
+              "name": {
+                "firstName": "9hh3S3QNP7xctoQiQuVfnSAzKd69r3a8u5DVaXJCxsmb9JAXkgPqhbc",
+                "lastName": "2V9arU36gvtaofWmNowewoj9u7gbNA2qsJZEQ3WPky5mQ"
+              },
+              "noteData": "BXy2t7F1FvDg1tBxAX4zE87MMa2MdIC+VgHIs3W1Tgwg0KXhGQlXJUAZQMDhlqjSQCdYE/ATDlS1aGyJElOHSQ8=",
+              "originPage": "53900"
+            }
+          ],
+          "network": "testnet",
+          "payments": [
+            {
+              "address": "4GXV5RgR7eMh44rTxKP1EJEjJ9Tygdv3DckgscLTdJ46x",
+              "amountNicks": "1000000"
+            }
+          ],
+          "rawTransaction": "cQF+xl/KQfXZ8G8Agf1j+1tgDtfjAALXC/wo1/1R/AH6Yg2OKdiDLRAwdxoKotN50q0CCDDjhRO71q7pBxDQr7mWQhdB3A4goGRPjR+RJ9EYQIBjE880DVo+GiCwJLrCnR4D8locMnSYuMYV8M3q2NgV8ODW0HEBfjMTzswxrYx0gL5WAcizdbVODCDQpeEZCVclQBlAwOGWqNJAJ1gT8BMOVLVobIkSU+MCCLC57YJsF31cBxCYDOvTJ1rHAg3w94uAOsSX7ssD/Ar1M4bEa8BkgIDMOO4WeLYlvjlcUCsLIIDNQUVSvrRmHEBgf18asTeVYTWAwDafe5gcBQVyAAETth1P12RDQoBACZUN+hqAgWoFfLa3sXXWUI7HhR8Eg2QQhexwQXW4oAYkIKEPIDBp72DelckeH0CAhhREKLkoFj3Ar+4GsYVtLQYOIPDm7VbG0feYDBDgCVwYSXhwD69suKhWQ3JiDqX4cEENqMAXSQ45l8MFVSABAOhwQQU=",
+          "sourceAddress": "4Qo7o9rHwWr1qSKFdvvDe4DvJNsG2hJMnUwPXfExN7NyvkZn7ihJbiq",
+          "tip": {
+            "blockId": "5TSkZQ7J4nfmDfkGLf1EkdF7ZVzEZdAqTADfBzDqYBNKz",
+            "height": "53999"
+          },
+          "version": 1
+        },
+        "review": {
+          "feeNicks": "655360",
+          "minimumFeeNicks": "655360",
+          "outputNicks": "39344640",
+          "spends": [
+            {
+              "feeNicks": "655360",
+              "name": {
+                "firstName": "9hh3S3QNP7xctoQiQuVfnSAzKd69r3a8u5DVaXJCxsmb9JAXkgPqhbc",
+                "lastName": "2V9arU36gvtaofWmNowewoj9u7gbNA2qsJZEQ3WPky5mQ"
+              },
+              "outputs": [
+                {
+                  "amountNicks": "1000000",
+                  "lockRoot": "9SzCP28uJkJqgcvWcqjE89ePY2CFiDMhyDwLXoVysp2JjrdrA85pbRA",
+                  "noteData": "BXy2t7F1FvDg1tBx4QfBIBlEIZs6BCc="
+                },
+                {
+                  "amountNicks": "38344640",
+                  "lockRoot": "DMQNTMaozdKTP61H83hgQwvddLTf7vuJYzQNCAEFkwBVzazG3H3g2ym",
+                  "noteData": "BXy2t7F1FvDg1tBxAX4zE87MMa2MdIC+VgHIs3W1Tgwg0KXhGQlXJUAZQMDhlqjSQCdYE/ATDlS1aGyJElOHSQ8="
+                }
+              ],
+              "requiredSignatures": 1,
+              "signatureHash": "5fUpxwrn8GreFVfHx8fvEbhGfit8cTQM91oQx53eF3PbeLyuMPR8xyB",
+              "signerHashes": []
+            }
+          ],
+          "transactionId": "5CHwa8ERbQu1HMDPqhqq14hTg1fh8pobHLhqPrUAvQ6uoKnLcKyBFm"
+        }
+      },
+      "signedRawTransaction": "cQEEOm5S+19opgwDCFi2XIUsESp8BhCgLWQd47xazg8gQA+Rhsp2oikPEKD5LocLbiQPrQIIMOOFE7vWrukHENCvuZZCF0HcDiCgZE+NH5En0RhAgGMTzzQNWj4aILAkusKdHgPyWhwydJi4xhXwzerY2BXw4NbQcQF+MxPOzDGtjHSAvlYByLN1tU4MINCl4RkJVyVAGUDA4Zao0kAnWBPwEw5UtWhsiRJT4wIIsLntgmwXfVwHEJgM69MnWscCDfD3i4A6xJfuywP8CvUzhsRrwGSAgMw47hZ4tiW+1VDIV4DeRZqMHIzlPA0gsDudNF1LgFoaoIcO/8kbX3oxAwhgpm+MNL4RJQf41UW5eh8lb40AAdBKzd+jEv3CAuTB8GVQ589AGUBArLWaXBwwGT2AwLhiyRoEs95ngBx/FKTCzzz4AwjcbwRtA35bZwN639trYq6uzJ0L6AwdbnbA51vdUwf8u7SccIBgQ04jNmBnU+LOAAEy9tdnQH9A0R+BGrMpYMDX59qaBgiSf4gkAwQowt3RAYLx8tHMAIG8KyFtgMDoUoI1IKcXmjLQg5q3weGiOlxUKwsggM1BRVK+tGYcQGB/XxqxN5VhNYDANp97mBwFBXIAARO2HU/XZENCgEAJlQ36GoCBagV8trexddZQnseFHwSDZBCF7HBRdbioBiQgoQ8gMGnvYN6VyR4fQICGFEQouSgWPcCv7gaxhW0tBg4g8ObtVsbR95gMEOAJXBhJeHAPr2y4sFZDUn0OpflwUQ2owBdJDrsCh4uqQAIA0OGiCg==",
+      "signedTransactionId": "93ZAj9rCGuCBDouu5GGjwEZ45V66tjWUVTm9swmEuxh2ASp4NsV5DRG"
+    },
+    {
+      "name": "preBythos",
+      "response": {
+        "bundle": {
+          "candidateHeight": "53999",
+          "format": "nockchain-signing-bundle",
+          "inputs": [
+            {
+              "amountNicks": "40000000",
+              "name": {
+                "firstName": "9hh3S3QNP7xctoQiQuVfnSAzKd69r3a8u5DVaXJCxsmb9JAXkgPqhbc",
+                "lastName": "2V9arU36gvtaofWmNowewoj9u7gbNA2qsJZEQ3WPky5mQ"
+              },
+              "noteData": "BXy2t7F1FvDg1tBxAX4zE87MMa2MdIC+VgHIs3W1Tgwg0KXhGQlXJUAZQMDhlqjSQCdYE/ATDlS1aGyJElOHSQ8=",
+              "originPage": "53900"
+            }
+          ],
+          "network": "testnet",
+          "payments": [
+            {
+              "address": "4GXV5RgR7eMh44rTxKP1EJEjJ9Tygdv3DckgscLTdJ46x",
+              "amountNicks": "1000000"
+            }
+          ],
+          "rawTransaction": "cQEEtgNHjZwvc/MD7B12SIbZEJU5wB6aAiwqzseGA/zkp1P92+XfQYAAUol5aASWYHwVQIAZL5zYtXZNP4CAfs21FLoI4nYAASV7avyIPInGAAIcm3imadDy0QCBJdEV7vQYkNfikKHDxDWuCnhwa+i4AL+ZCWfmmFZGOkBfqwDk2bpaJwYQ6NLwjISrEqAMIOBwS1RpoBOsCfgJB6paNLZEialxAQTY3HZBtos+rgMITIb16ROtY4EG+PtFQB3iS/flAX6F+hlD4jVgMkBAZhx3CzzbEt8cDqOVBRDA5qAiKV9aMw4gsL8vjdibyrAaQGCbzz1MjoICOYCACduOp2uyISFAoITKBn0NwEC1Aj7b29g6a6iy48IPgkEyiEJ2OIw6HEYDEpDQBxCYtHcw78pkjw8gQEMKIpRcFIse4Fd3g9jCthYDBxB483Yr4+h7TAYI8AQujCQ8uIdn2XAorYacwxwq7OEwGlCBL1UcUimHwyjQAADR4TAK",
+          "sourceAddress": "4Qo7o9rHwWr1qSKFdvvDe4DvJNsG2hJMnUwPXfExN7NyvkZn7ihJbiq",
+          "tip": {
+            "blockId": "5TSkZQ7J4nfmDfkGLf1EkdF7ZVzEZdAqTADfBzDqYBNKz",
+            "height": "53998"
+          },
+          "version": 1
+        },
+        "review": {
+          "feeNicks": "2654208",
+          "minimumFeeNicks": "2654208",
+          "outputNicks": "37345792",
+          "spends": [
+            {
+              "feeNicks": "2654208",
+              "name": {
+                "firstName": "9hh3S3QNP7xctoQiQuVfnSAzKd69r3a8u5DVaXJCxsmb9JAXkgPqhbc",
+                "lastName": "2V9arU36gvtaofWmNowewoj9u7gbNA2qsJZEQ3WPky5mQ"
+              },
+              "outputs": [
+                {
+                  "amountNicks": "36345792",
+                  "lockRoot": "DMQNTMaozdKTP61H83hgQwvddLTf7vuJYzQNCAEFkwBVzazG3H3g2ym",
+                  "noteData": "BXy2t7F1FvDg1tBxAX4zE87MMa2MdIC+VgHIs3W1Tgwg0KXhGQlXJUAZQMDhlqjSQCdYE/ATDlS1aGyJElOHSQ8="
+                },
+                {
+                  "amountNicks": "1000000",
+                  "lockRoot": "9SzCP28uJkJqgcvWcqjE89ePY2CFiDMhyDwLXoVysp2JjrdrA85pbRA",
+                  "noteData": "BXy2t7F1FvDg1tBx4QfBIBlEIZs6BCc="
+                }
+              ],
+              "requiredSignatures": 1,
+              "signatureHash": "B6e9i5S5SDozud3bsUZ1BwUNxjgg2nuRJWXCuNed5gMGPQbxeqyp3GG",
+              "signerHashes": []
+            }
+          ],
+          "transactionId": "CzzwVULSbVfwjGZW3WBGCw45KAESgxi2HVCcYN9VAbzfsridd1eqW4t"
+        }
+      },
+      "signedRawTransaction": "cQH+yp74Jf1wFHaAv3SboD/z4ToeQGBECgDh2xQ8M4CAq2pDaYTi6jRAgEgIK03RxHq6CiDAjBdO7Fq7ph9AQL/mWgpdBHE7gICSPTV+RJ5EYwABjk080zRo+WiAwJLoCnd6DMhrccjQYeIaVwU8uDV0XIDfzIQzc0wrIx2gr1UA8mxdrRMDCHRpeEbCVQlQBhBwuCWqNNAJ1gT8hANVLRpbosTUuAACbG67INtFH9cBBCbD+vSJ1rFAA/z9IqAO8aX78gC/Qv2MIfEaMBkgIDOOuwWebYlvNZTlFaB3kSYjB2M5TwMI7E4nTdcSoJYG6KHDf/LGl17MAAKY6RsjjW9EyQF+dVGu3kfJWyNAALRS8/eoRL+wAHkwfBnU+TNQBhAQa60mFwdMRg8gMK5YsgbBrPcZIMcfBanwMw/+AAL3G0HbgN/W2YDe9/aamKsrc+cC/oHHoDHgL3aMUwO+FAfIM0CQRBuIGNBfllDVAAEtrNd4gADlKzwW2Om7BTDgey7DwwP61uWTHfAP8I6fAR1+eX0MEJQGvS8HCOipRGgD7gvTW4HeE33ED/fR4T5aWQABbA4qkvKlNeMAAvv70oi9qQyrAQS2+dzD5CgokAMImLDteLomGxICBEqobNDXAAxUK+CzvY2ts4ZiOy78IBgkgyhkh/uow300IAEJfQCBSXsH865M9vgAAjSkIELJRbHoAX51N4gtbGsxcACBN2+3Mo6+x2SAAE/gwkjCg3t4lg330mrIj8+h0B7uowEV+FLFIe1/uI8CDQAQHe6j",
+      "signedTransactionId": "BXVCVPBpQwSqfnCjZFCNdUJvYW4Qt84TezC4YwMMz4gut4iUeEMPB6v"
+    },
+    {
+      "name": "coinbase",
+      "response": {
+        "bundle": {
+          "candidateHeight": "54000",
+          "format": "nockchain-signing-bundle",
+          "inputs": [
+            {
+              "amountNicks": "40000000",
+              "name": {
+                "firstName": "4UnFAPYyN7PrDBUmExuy4MnhNS51TV1Xscm2saL7sgiXdhJC2tKFPs7",
+                "lastName": "2V9arU36gvtaofWmNowewoj9u7gbNA2qsJZEQ3WPky5mQ"
+              },
+              "noteData": "Ag==",
+              "originPage": "53900"
+            }
+          ],
+          "network": "testnet",
+          "payments": [
+            {
+              "address": "4GXV5RgR7eMh44rTxKP1EJEjJ9Tygdv3DckgscLTdJ46x",
+              "amountNicks": "1000000"
+            }
+          ],
+          "rawTransaction": "cQEEpCz/GtkA8JADCHD0n7AM1kpbB+iX6rlfpn3M9gD/6EOmPgJYkxcgYGvz5+zbRtVaBYgxEfLCkpY2A/RjT5JlRFnIcoD8UlMTtgn6OAMIoItvyUDbQtYDfvSk1qfsKwJjccjQYeIaV8A3q2NjV8CDW0PHBfjNTDgzx7Qy0gH6WgUgz9bVOjGAQJeGZyRclQBlAAGHW6JKA51gTcBPOFDVorElSkwLeHRp7Uo42eFmalwAgcsbqegFDTzCAL26qVqZhySSHkAAa/o1CBdfUD+AwKLOpkb7Fd85oMc8UG4vQxNrzeFmWlkAATa3XZDtoo/rAAKTYX36ROtYoAH+fhFQh/jSfXmAX6F+xpB4DZgMEJAZx90Cz7bEr4DP9ja2zoby2+FmGlCBb5EMsLuxonVqRNHoAAJFI9Z0pzS/hAF+G7NGFKiGpX8AgYwbYxZrM1VSgIDrSdKXFNOPcWUBBLA5qEjKl9aMAwjs70sj9qYyrAYQ2OZzD5OjoEAOIGDCtuPpmmxICBAoobJBXwMwUK2GzMasoQCPCz8IBskgCtnhZupwMw1IQEI/5FYON1OBBACmw80U",
+          "sourceAddress": "4Qo7o9rHwWr1qSKFdvvDe4DvJNsG2hJMnUwPXfExN7NyvkZn7ihJbiq",
+          "tip": {
+            "blockId": "5TSkZQ7J4nfmDfkGLf1EkdF7ZVzEZdAqTADfBzDqYBNKz",
+            "height": "53999"
+          },
+          "version": 1
+        },
+        "review": {
+          "feeNicks": "679936",
+          "minimumFeeNicks": "679936",
+          "outputNicks": "39320064",
+          "spends": [
+            {
+              "feeNicks": "679936",
+              "name": {
+                "firstName": "4UnFAPYyN7PrDBUmExuy4MnhNS51TV1Xscm2saL7sgiXdhJC2tKFPs7",
+                "lastName": "2V9arU36gvtaofWmNowewoj9u7gbNA2qsJZEQ3WPky5mQ"
+              },
+              "outputs": [
+                {
+                  "amountNicks": "38320064",
+                  "lockRoot": "DMQNTMaozdKTP61H83hgQwvddLTf7vuJYzQNCAEFkwBVzazG3H3g2ym",
+                  "noteData": "BXy2t7F1FvDg1tBxAX4zE87MMa2MdIC+VgHIs3W1Tgwg0KXhGQlXJUAZQMDhlqjSQCdYE/ATDlS1aGyJElOHSQ8="
+                },
+                {
+                  "amountNicks": "1000000",
+                  "lockRoot": "9SzCP28uJkJqgcvWcqjE89ePY2CFiDMhyDwLXoVysp2JjrdrA85pbRA",
+                  "noteData": "BXy2t7F1FvDg1tBx4QfBIBlEIZs6BCc="
+                }
+              ],
+              "requiredSignatures": 1,
+              "signatureHash": "GWWwGjZZUPzEuWozPhAoiCQfDG43Ly2SfT3qHwgnAhidJDS18wZw5n",
+              "signerHashes": []
+            }
+          ],
+          "transactionId": "9cWrFnLkznRDxKCW1ygwHYyf3uzTeC6954K2DS527zg2nkwoKymnBQm"
+        }
+      },
+      "signedRawTransaction": "cQEEHlYhGcIebb0D/KT5lwO0LbT/AAJ1eCnSOR4/zAHuOHozBKtvRgIEknBR/kEYqLerADEmQl5Y0tJmgH7sSbKMKAtZDpBfamrCNkEfZwABdPEtGWhbyHrAj57U+pR9RWAsDhk6TFzjCvhmdWzsCnhwa+i4AL+ZCWfmmFZGOkBfqwDk2bpaJwYQ6NLwjISrEqAMIOBwS1RpoBOsCfgJB6paNLZEiWkBjy6tXQknOxxMjQsgcHkjFb2ggUcYoFc3VSvzkETSAwhgTb8G4eIL6gcQWNTZ1Gi/4jsH9JgHyu1laGKt1VCnV4DeRZqMHIzlPA0gsDudNF1LgFoaoIcO/8kbX3oxAwhgpm+MNL4RJQf41UW5eh8lb40AAdBKzd+jEv3CAuTB8GVQ589AGUBArLWaXBwwGT2AwLhiyRoEs95ngBx/FKTCzzz4AwjcbwRtA35bZwN639trYq6uzJ0LEGCW6zUH/B9vPWRAp7oulQP6n9KzGPDxWpbwAd3UktIMEEDo6joD+zCX+AZ8o/qCY0C7oAEDBCMCJqUBP2edEBrwM1bPjwH9XVZ6DBCQnwH/A3sBpFgOB9PhYFpZAAE2t12Q7aKP6wACk2F9+kTrWKAB/n4RUIf40n15gF+hfsaQeA2YDBCQGcfdAs+2xK+Az/Y2ts6G2tvhYBpQgW+RDLC7saJ1akTR6AACRSPWdKc0v4QBfhuzRhSohqV/AIGMG2MWazNVUoCA60nSlxTTj3FlAQSwOahIypfWjAMI7O9LI/amMqwGENjmcw+To6BADiBgwrbj6ZpsSAgQKKGyQV8DMFCthoz7rKH6jgs/CAbJIArZ4WDqcDANSEBCP+T8DwdTgQQApsPBFA==",
+      "signedTransactionId": "BvX1qVDqRSeYV8freywiZr6bRzGYHazV99Dx1MXAm9fQtiG58n4Xjn9"
+    },
+    {
+      "name": "sweep",
+      "response": {
+        "bundle": {
+          "candidateHeight": "54000",
+          "format": "nockchain-signing-bundle",
+          "inputs": [
+            {
+              "amountNicks": "40000000",
+              "name": {
+                "firstName": "9hh3S3QNP7xctoQiQuVfnSAzKd69r3a8u5DVaXJCxsmb9JAXkgPqhbc",
+                "lastName": "2V9arU36gvtaofWmNowewoj9u7gbNA2qsJZEQ3WPky5mQ"
+              },
+              "noteData": "BXy2t7F1FvDg1tBxAX4zE87MMa2MdIC+VgHIs3W1Tgwg0KXhGQlXJUAZQMDhlqjSQCdYE/ATDlS1aGyJElOHSQ8=",
+              "originPage": "53900"
+            },
+            {
+              "amountNicks": "5000000",
+              "name": {
+                "firstName": "9hh3S3QNP7xctoQiQuVfnSAzKd69r3a8u5DVaXJCxsmb9JAXkgPqhbc",
+                "lastName": "2V9arU36gvtaofWmNowewoj9u7gbNA2qsJZEQ3WPky5mR"
+              },
+              "noteData": "BXy2t7F1FvDg1tBxAX4zE87MMa2MdIC+VgHIs3W1Tgwg0KXhGQlXJUAZQMDhlqjSQCdYE/ATDlS1aGyJElOHSQ8=",
+              "originPage": "53900"
+            }
+          ],
+          "network": "testnet",
+          "payments": [
+            {
+              "address": "4GXV5RgR7eMh44rTxKP1EJEjJ9Tygdv3DckgscLTdJ46x",
+              "amountNicks": "44328256"
+            }
+          ],
+          "rawTransaction": "cQEEzjEjU+7XiTMD/GKgWlP/sk7JAAKV6EmtR0W7xwEEwlywrzGC7nMBAill3BsfR6bRVQABZrxwYtfaNf0AAvo111LoIojbAQSU7KnxI/IkGgMIcGzimaZBy0cDBJZEV7jTY0Bei0OGDhPXuAK+WR0buwIe3Bo6LsBvZsKZOaaVkQ7Q1yoAebau1okBBLo0PCPhqgQoAwg43BJVGugEawJ+woGqFo0tUWJqXAABNrddkO2ij+sAApNhffpE61igAf5+EVCH+NJ9eYBfoX7GkHgNmAwQkBnH3QLPtsQ3h3NqZQEEsDmoSMqX1owDCOzvSyP2pjKsBhDY5nMPk6OgQA4gYMK24+mabEgIECihskFfAzBQrYDP9ja2zhpq87jwg2CQDKKQHc6pDufUgAqggWUAgUl7B/OuTPb4AAI0pCBCyUWx6AF+dTeILWxrMXAAgTdvtzKOvsdkgABP4MJIwoN7+HBOBRIAkGY1jOdCDpWzcUOdXdlwEG/IUgx4QEvMAALeYx65mU83yQF2JcPePofi1x3glwaOsaYjttwHEGCyXz/DeNd+Bwg4rqvkAF4N2g7nVIdzKg==",
+          "sourceAddress": "4Qo7o9rHwWr1qSKFdvvDe4DvJNsG2hJMnUwPXfExN7NyvkZn7ihJbiq",
+          "tip": {
+            "blockId": "5TSkZQ7J4nfmDfkGLf1EkdF7ZVzEZdAqTADfBzDqYBNKz",
+            "height": "53999"
+          },
+          "version": 1
+        },
+        "review": {
+          "feeNicks": "671744",
+          "minimumFeeNicks": "671744",
+          "outputNicks": "44328256",
+          "spends": [
+            {
+              "feeNicks": "0",
+              "name": {
+                "firstName": "9hh3S3QNP7xctoQiQuVfnSAzKd69r3a8u5DVaXJCxsmb9JAXkgPqhbc",
+                "lastName": "2V9arU36gvtaofWmNowewoj9u7gbNA2qsJZEQ3WPky5mR"
+              },
+              "outputs": [
+                {
+                  "amountNicks": "5000000",
+                  "lockRoot": "9SzCP28uJkJqgcvWcqjE89ePY2CFiDMhyDwLXoVysp2JjrdrA85pbRA",
+                  "noteData": "BXy2t7F1FvDg1tBx4QfBIBlEIZs6BCc="
+                }
+              ],
+              "requiredSignatures": 1,
+              "signatureHash": "5c41MEKHoXkgBsLtPDD5VPmLyrZjTA4fDb287jN1Rk7aWJ2UtAZwuTN",
+              "signerHashes": []
+            },
+            {
+              "feeNicks": "671744",
+              "name": {
+                "firstName": "9hh3S3QNP7xctoQiQuVfnSAzKd69r3a8u5DVaXJCxsmb9JAXkgPqhbc",
+                "lastName": "2V9arU36gvtaofWmNowewoj9u7gbNA2qsJZEQ3WPky5mQ"
+              },
+              "outputs": [
+                {
+                  "amountNicks": "39328256",
+                  "lockRoot": "9SzCP28uJkJqgcvWcqjE89ePY2CFiDMhyDwLXoVysp2JjrdrA85pbRA",
+                  "noteData": "BXy2t7F1FvDg1tBx4QfBIBlEIZs6BCc="
+                }
+              ],
+              "requiredSignatures": 1,
+              "signatureHash": "3dFT81j6dw5Bfy5Yhxo9jBowcwoMktGHeQkb8VP4xqZp5eA2RV7KYnu",
+              "signerHashes": []
+            }
+          ],
+          "transactionId": "BRBeKVCxvhnUiCEAPyhMhRqdYQ86zjW3BM6dHdrQoFXfhPLN8GpiMxj"
+        }
+      },
+      "signedRawTransaction": "cQH+4/2Qsn0pS36AvTviLzdZlLYG+NcyO0vhl9GkAQSKkxINeJkuPwECweNLswTUHahVAAFmvHBi19o1/QAC+jXXUugiiNsBBJTsqfEj8iQaAwhwbOKZpkHLRwMElkRXuNNjQF6LQ4YOE9e4Ar5ZHRu7Ah7cGjouwG9mwpk5ppWRDtDXKgB5tq7WiQEEujQ8I+GqBCgDCDjcElUa6ARrAn7CgaoWjS1RYmpcAAE2t12Q7aKP6wACk2F9+kTrWKAB/n4RUIf40n15gF+hfsaQeA2YDBCQGcfdAs+2xLcaqvcK0LtIk5GDsZynAQR2p5OmawlQSwP00OE/eeNLL2YAAcz0jZHGN6LkAL+6KFfvo+StESAAWqn5e1SiX1iAPBi+DOr8GSgDCIi1VpOLAyajBxAYVyxZg2DW+wyQ44+CVPiZB38AgfuNoG3Ab+tsQO97e03M1ZW5cwEbllKUBggAy4RAAwQ57bT+AQKEBufbgO8+hVsPECzDb8gG/K2tSTDw0YIOjgEbTqgVBwj4eDNUAwS+2vbVAd0VVokO6OWmMGnAF0KYKgds+GbGDPyXpHPhcEYdzqiVBRDA5qAiKV9aMw4gsL8vjdibyrAaQGCbzz1MjoICOYCACduOp2uyISFAoITKBn0NwEC1Aj7b29g6a6jJ48IPgkEyiEJ2OKM6nFEDKoAGlgEEJu0dzLsy2eMDCNCQggglF8WiB/jV3SC2sK3FwAEE3rzdyjj6HpMBAjyBCyMJD+7hwxkVSABAmtUwlgs5VMzGNVTY1VC9N1zAC9gb/tg7oO/X1cABgly4BNIAAa75Un7A5yCubAd8SAmpeUB2rH5HoHtPs9ABgngal8kAwWJYq2bAriIFzQECXtQZ3QBBxTPmfEAnQ/DcA76mzvoT+LFYysjhjDqcUSsbUrYb8ugDHtASM4CA95hHbubTTXKAXcmwt8+h+HUH+KWBY6zpiC33AQSY7NfPMN613wECjusqOYBXg7bDGdXhjAo=",
+      "signedTransactionId": "9MVTSAonh3nZBGhVaweZTWz7FGBQULPWXHyZPwft4V98k8ufWN1ibzU"
+    },
+    {
+      "name": "feeRemainder",
+      "response": {
+        "bundle": {
+          "candidateHeight": "54000",
+          "format": "nockchain-signing-bundle",
+          "inputs": [
+            {
+              "amountNicks": "1450000",
+              "name": {
+                "firstName": "9hh3S3QNP7xctoQiQuVfnSAzKd69r3a8u5DVaXJCxsmb9JAXkgPqhbc",
+                "lastName": "2V9arU36gvtaofWmNowewoj9u7gbNA2qsJZEQ3WPky5mQ"
+              },
+              "noteData": "BXy2t7F1FvDg1tBxAX4zE87MMa2MdIC+VgHIs3W1Tgwg0KXhGQlXJUAZQMDhlqjSQCdYE/ATDlS1aGyJElOHSQ8=",
+              "originPage": "53900"
+            }
+          ],
+          "network": "testnet",
+          "payments": [
+            {
+              "address": "4GXV5RgR7eMh44rTxKP1EJEjJ9Tygdv3DckgscLTdJ46x",
+              "amountNicks": "1000000"
+            }
+          ],
+          "rawTransaction": "cQF+UNvF5jFbj3aA/k93q4xDC/cNIKChLIoV/fnNG6DXa4hWWwCmMgH/FuJUIUfd9r8KIMCMF07sWrumH0BAv+ZaCl0EcTuAgJI9NX5EnkRjAAGOTTzTNGj5aIDAkugKd3oMyGtxyNBh4hpXwDerY2NXwINbQ8cF+M1MODPHtDLSAfpaBSDP1tU6MYBAl4ZnJFyVAGUAAYdbokoDnWBNwE84UNWisSVKTI0LIMDmtguyXfRxHUBgMqxPn2gdCzTA3y8C6hBfui8P8CvUzxgSrwGTAQIy47hb4NmW+OZwQ60sgAA2BxVJ+dKacQCB/X1pxN5UhtUAAtt87mFyFBTIAQRM2HY8XZMNCQECJVQ26GsABqoV8NnextZZQ0EeF34QDJJBFLLDDdXhhhqQgIQ+gADImilm7ywfa4A+mPG7PuzXXg/Qn8E1wWusDIEBBC5z7iXVy9kBAb8iUKbLJZrie7ihAge628MNFQ==",
+          "sourceAddress": "4Qo7o9rHwWr1qSKFdvvDe4DvJNsG2hJMnUwPXfExN7NyvkZn7ihJbiq",
+          "tip": {
+            "blockId": "5TSkZQ7J4nfmDfkGLf1EkdF7ZVzEZdAqTADfBzDqYBNKz",
+            "height": "53999"
+          },
+          "version": 1
+        },
+        "review": {
+          "feeNicks": "450000",
+          "minimumFeeNicks": "442368",
+          "outputNicks": "1000000",
+          "spends": [
+            {
+              "feeNicks": "450000",
+              "name": {
+                "firstName": "9hh3S3QNP7xctoQiQuVfnSAzKd69r3a8u5DVaXJCxsmb9JAXkgPqhbc",
+                "lastName": "2V9arU36gvtaofWmNowewoj9u7gbNA2qsJZEQ3WPky5mQ"
+              },
+              "outputs": [
+                {
+                  "amountNicks": "1000000",
+                  "lockRoot": "9SzCP28uJkJqgcvWcqjE89ePY2CFiDMhyDwLXoVysp2JjrdrA85pbRA",
+                  "noteData": "BXy2t7F1FvDg1tBx4QfBIBlEIZs6BCc="
+                }
+              ],
+              "requiredSignatures": 1,
+              "signatureHash": "BWnAeVR27unYbaLaGuJH5MXaFQNcrLKtRUJhbCDGkXce66BRuEjrz81",
+              "signerHashes": []
+            }
+          ],
+          "transactionId": "7MUB31addWvu4wzdtd1D7e8uWG6os4bk1ZdawsKvnSe3GSjvVDZ8UUD"
+        }
+      },
+      "signedRawTransaction": "cQH6TfEGlwN7EziAwMKQFuAqtUpgAIHouFMDPV0RyQA/j+8aYR5+Zxwg0E596G+EDqBaBRBgxgsndq1d0w8goF9zLYUugrgdQEDJnho/Ik+iMYAAxyaeaRq0fDRAYEl0hTs9BuS1OGToMHGNK+Cb1bGxK+DBraHjAvxmJpyZY1oZ6QB9rQKQZ+tqnRhAoEvDMxKuSoAygIDDLVGlgU6wJuAnHKhq0dgSJabGBRBgc9sF2S76uA4gMBnWp0+0jgUa4O8XAXWIL92XB/gV6mcMideAyQABmXHcLfBsS3yroYKvAL2LNBk5GMt5GkBgdzppupYAtTRADx3+kze+9GIGEMBM3xhpfCNKDvCri3L1PkreGgECoJWav0cl+oUFyIPhy6DOn4EygIBYazW5OGAyegCBccWSNQhmvc8AOf4oSIWfefAHELjfCNoG/LbOBvS+t9fEXF2ZOxcggLXDGQz4zsf8/AABnQEadICALHC7PkCQuTmxGnBnOY8f0MEhBFjgv6ij2QMEp5820QGCdFWp3QBB4EHBeoCA4dJMNqCXl/DXAZ9J2cIaIFCBmQ0FOjQOnTmcUodTamUBBLA5qEjKl9aMAwjs70sj9qYyrAYQ2OZzD5OjoEAOIGDCtuPpmmxICBAoobJBXwMwUK2Az/Y2ts4a6vK48INgkAyikB1OqQ6n1IAEJPQBBEDWTDF7Z/lYA/TBjN/1Yb/2eoD+DK4JXmNlCAwgcJlzL6lezg4I+BWBMl0u0RTfwykVONDdHk6p",
+      "signedTransactionId": "9SvsTg9fTboF6EjeC5SrfZXPLEZAgCH9goR783PdY66D5dfbtx9e3gT"
+    }
+  ],
+  "seed": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f"
+}

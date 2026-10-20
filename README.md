@@ -8,6 +8,46 @@ Python 3.11+; the package uses the standard library and has no runtime dependenc
 pip install nockchain
 ```
 
+## Sign a Nockblocks bundle locally
+
+The remote Nockblocks MCP exposes `v1_prepareTransaction` through its `search`
+and `execute` tools. Save the returned `result.bundle` object as `bundle.json`.
+The package command runs locally without a native binary or a local MCP server:
+
+```sh
+pip install nockchain==0.3.0
+python -m nockchain inspect bundle.json
+python -m nockchain sign bundle.json --out signed.json
+```
+
+The installed `nockchain` command provides the same interface. `sign` shows the
+locally reconstructed review and asks for `SIGN` before prompting for a hidden
+zprv. It requires an interactive terminal. `--key-file` reads a local plain-text
+zprv; `--path` derives an explicitly named child key. For recovery phrases, use
+`--mnemonic --path "m/..."` and add `--passphrase` when needed. The path must
+identify the key for the bundle's source address. Keep secrets out of MCP
+requests, chats, shell arguments, and transaction files.
+
+The command checks canonical encoding, existing signatures, full input
+commitments, maturity, recipients, change, and the locally recomputed payment
+plan and fee. Bundles support V1 inputs that one source key can spend, including
+mature coinbase notes. A small remainder assigned to the fee is shown in
+`feeNicks`. The output file has owner-only permissions and must not already
+exist. The command does not broadcast. After explicit approval to submit, pass
+the signed file's `rawTransaction` to `v1_submitTransaction`.
+
+Network, tip, and input records come from the indexer. They are not proof of
+unspent status or finality, and the network label is not a consensus signature
+domain. Compare the review with the intended payment and a trusted chain-state
+source. The HTTP MCP returns data; it cannot launch the local command.
+
+Applications use `inspect_signing_bundle(value)` for an `InspectedSigningBundle`
+with `bundle`, `transaction`, and `review`, and `sign_signing_bundle(value, key)`
+for a signed bundle. Both validate the bundle. Applications obtain user
+authorization before calling the signing function.
+`verify_signatures(require_threshold=False)` validates existing signatures and
+fee coverage while allowing missing signatures.
+
 ## Receive from a public branch
 
 ```python
