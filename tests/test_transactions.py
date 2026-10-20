@@ -6,6 +6,7 @@ import unittest
 import nockchain as n
 from nockchain._core import parts, leaf_count
 from nockchain.transaction import _Spend, _minimum_fee
+from nockchain.lock_tree import build_lock_merkle_proof
 from test_protocol import DATA, REFERENCE, key_for
 
 CONSENSUS = json.loads((DATA / "consensus.json").read_text())
@@ -160,7 +161,7 @@ class TransactionTests(unittest.TestCase):
             tx.validate_inputs([note], 100)
         metadata = n.noun_tuple(n.Cell(1, 2), 0, 0)
         output = n.OutputV1(lock.root, metadata, 1, note.hash())
-        spend = _Spend(note.name, lock, 0, None, (output,))
+        spend = _Spend(note.name, build_lock_merkle_proof(lock), 0, None, (output,))
         expected = 3 * (1 << 14) + (leaf_count(lock._proof()) + 73) * (1 << 12)
         self.assertEqual(_minimum_fee((spend,)), expected)
         self.assertEqual(_minimum_fee((replace(spend, outputs=(output, output)),)), expected)
